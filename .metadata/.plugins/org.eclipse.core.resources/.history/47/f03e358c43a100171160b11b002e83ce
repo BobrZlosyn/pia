@@ -1,0 +1,5 @@
+package com.za.tutorial.databaseHandle.copy;
+
+public class ExecuteQuery {
+
+}

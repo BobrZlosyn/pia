@@ -1,0 +1,22 @@
+package com.za.tutorial.databaseHandle;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+public class ExecuteQuery {
+
+	@Autowired
+    public void setDataSource(DataSource dataSource) {
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
+    }
+	
+	public List<Map<String, Object>> executeSelectQuery() {
+		return jdbcTemplate.query( "select first_name, last_name from t_actor");
+	}
+	
+	public List<Object> executeUpdateQuery() {
+		return this.jdbcTemplate.update( "select first_name, last_name from t_actor", new ActorMapper());
+	}
+}

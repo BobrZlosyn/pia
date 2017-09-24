@@ -1,0 +1,8 @@
+package com.za.tutorial.databaseHandle;
+
+public class ExecuteQuery {
+
+	public executeQueryForSingleObject() {
+		
+	}
+}

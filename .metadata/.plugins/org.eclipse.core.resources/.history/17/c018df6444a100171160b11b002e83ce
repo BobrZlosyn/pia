@@ -1,0 +1,11 @@
+package com.za.tutorial.databaseHandle;
+
+public class ExecuteQuery {
+
+	public executeSelectQuery() {
+		return this.jdbcTemplate.query( "select first_name, last_name from t_actor", new ActorMapper());
+	}
+	public executeUpdateQuery() {
+		return this.jdbcTemplate.query( "select first_name, last_name from t_actor", new ActorMapper());
+	}
+}
