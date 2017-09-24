@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/demo")
 public class DemoController {
 	
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public String displayMessage(ModelMap model) {
+		System.out.println("ahojkz");
 		model.addAttribute("thankYouMessage", "Hello Spring MVC Framework!");		
 		return "default";
 	}
